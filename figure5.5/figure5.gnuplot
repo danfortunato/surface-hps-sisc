@@ -34,9 +34,9 @@ set grid ytics
 set grid back lt 1 lc rgb "#C8C8C8" lw 1.5
 
 set output 'figure5.tex'
-file  = 'figure5.txt'
-other = 'other.txt'
-plot file  using 1:2 w lp ls 1 title "\\footnotesize Surface HPS",\
-     other using 3:4 w lp ls 3 title "\\footnotesize Pseudospectral",\
-     other using 1:2 w lp ls 2 title "\\footnotesize MFEM \\texttt{+} UMFPACK",\
-     other using 5:6 w lp ls 4 title "\\footnotesize Layer potential",\
+file = 'figure5.txt'
+ext  = 'external.txt'
+plot file using 1:2 w lp ls 1 title "\\footnotesize Surface HPS",\
+     ext  using 3:4 w lp ls 3 title "\\footnotesize Pseudospectral",\
+     ext  using 1:2 w lp ls 2 title "\\footnotesize MFEM \\texttt{+} UMFPACK",\
+     ext  using 5:6 w lp ls 4 title "\\footnotesize Layer potential",\

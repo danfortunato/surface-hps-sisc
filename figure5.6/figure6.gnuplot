@@ -36,14 +36,14 @@ set output 'figure6.tex'
 set multiplot layout 1,2
 
 file = 'figure6.txt'
-mfem = 'mfem.txt'
+ext  = 'external.txt'
 set xrange [32:2048]
 set xlabel '$\nelem$' offset 0,0.3
 set yrange [1e-1:1e3]
 set ylabel 'Runtime (s)' offset 3.5,0
 @LMARGIN
 plot file i 0 using 1:2 w lp ls 1 title "Surface HPS",\
-     mfem i 0 using 1:2 w lp ls 2 title "MFEM \\texttt{+} UMFPACK"
+     ext  i 0 using 1:2 w lp ls 2 title "MFEM \\texttt{+} UMFPACK"
 
 unset xrange
 unset logscale x
@@ -54,4 +54,4 @@ set xlabel '$p$'
 @NOYTICS
 @RMARGIN
 plot file i 1 using 1:2 w lp ls 1 notitle,\
-     mfem i 1 using 1:2 w lp ls 2 notitle
+     ext  i 1 using 1:2 w lp ls 2 notitle

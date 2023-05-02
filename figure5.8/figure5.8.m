@@ -104,7 +104,7 @@ for l = 1:length(schemes)
 end
 
 % Write results
-fid = fopen('figure8.txt', 'w');
+fid = fopen('figure5.8.txt', 'w');
 for j = 1:length(dts)-1
     fprintf(fid, '%4d', 1/dts(j));
     for l = 1:length(schemes)

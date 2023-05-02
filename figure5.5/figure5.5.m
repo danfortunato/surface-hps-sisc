@@ -31,7 +31,7 @@ for k = 1:length(grids)
 end
 
 % Write results
-fid = fopen('figure5.txt', 'w');
+fid = fopen('figure5.5.txt', 'w');
 for k = 1:size(t,1)
     fprintf(fid, '%e %e\n', t(k), err(k));
 end

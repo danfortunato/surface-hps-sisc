@@ -58,7 +58,7 @@ end
 fprintf('\n');
 
 %% Write results
-fid = fopen('figure6.txt', 'w');
+fid = fopen('figure5.6.txt', 'w');
 fprintf(fid, '# h-refinement with p = 20\n');
 for k = 1:length(t_hconv)
     fprintf(fid, '%4d %e\n', nelem(k), t_hconv(k));

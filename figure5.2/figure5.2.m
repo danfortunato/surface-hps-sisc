@@ -1,25 +1,24 @@
-%% Figure 3a
+%% Figure 5.2a
 
 clf
-dom = surfacemesh.twisted_torus(30, 2, 20);
-plot(dom, 'linewidth', 1.5)
-view(-15, 37), camlight, axis off
+dom = surfacemesh.cube(17, 2);
+plot(dom, 'linewidth', 2)
+view(-45, 35), camlight, axis off
 
-%% Figure 3b
+%% Figure 5.2b
 
 % Run convergence study
-ns = [4 8 12]+1;
-nrefs = [0 1 2 3 4];
+ns = [3 4 5 6]+1;
+nrefs = [0 1 2 3 4 5 6];
 u = cell(length(nrefs), length(ns));
 rng(0)
-ffun = randnfun3(0.5);
+ffun = randnfun3(2);
 
 for j = 1:length(ns)
     fprintf('# p = %g, nref =', ns(j)-1);
-    dom_orig = surfacemesh.twisted_torus(ns(j), 1, 10);
     for k = 1:length(nrefs)
         fprintf(' %g', nrefs(k));
-        dom = refine(dom_orig, nrefs(k));
+        dom = surfacemesh.cube(ns(j), nrefs(k));
         f = surfacefun(@(x,y,z) ffun(x,y,z), dom);
         f = f - mean2(f);
         pdo = []; pdo.lap = 1;
@@ -40,9 +39,9 @@ for j = 1:length(ns)
 end
 
 % Write results
-fid = fopen('figure3.txt', 'w');
+fid = fopen('figure5.2.txt', 'w');
 for j = 1:size(err,1)
-    fprintf(fid, '%2d ', 2^(nrefs(j)+2));
+    fprintf(fid, '%2d ', 2^nrefs(j));
     for k = 1:size(err,2)
         fprintf(fid, ' %e', err(j,k));
     end

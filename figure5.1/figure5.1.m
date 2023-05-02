@@ -1,4 +1,4 @@
-%% Figure 1a
+%% Figure 5.1a
 
 clf
 l = 20; m = 10;
@@ -8,7 +8,7 @@ sol = surfacefun(@(x,y,z) solf(x,y,z), dom);
 plot(sol), hold on, plot(dom)
 colormap turbo, axis off
 
-%% Figure 1b
+%% Figure 5.1b
 
 % Run convergence study
 ns = [4 8 12 16 20]+1;
@@ -36,7 +36,7 @@ for j = 1:length(ns)
 end
 
 % Write results
-fid = fopen('figure1.txt', 'w');
+fid = fopen('figure5.1.txt', 'w');
 for j = 1:size(err,1)
     fprintf(fid, '%2d ', 2^(nrefs(j)+1));
     for k = 1:size(err,2)

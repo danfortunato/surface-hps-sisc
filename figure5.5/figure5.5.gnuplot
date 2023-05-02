@@ -33,8 +33,8 @@ set grid xtics
 set grid ytics
 set grid back lt 1 lc rgb "#C8C8C8" lw 1.5
 
-set output 'figure5.tex'
-file = 'figure5.txt'
+set output 'figure5.5.tex'
+file = 'figure5.5.txt'
 ext  = 'external.txt'
 plot file using 1:2 w lp ls 1 title "\\footnotesize Surface HPS",\
      ext  using 3:4 w lp ls 3 title "\\footnotesize Pseudospectral",\

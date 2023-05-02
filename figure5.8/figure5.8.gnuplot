@@ -36,8 +36,8 @@ set grid xtics
 set grid ytics
 set grid back lt 1 lc rgb "#C8C8C8" lw 1.5
 
-set output 'figure8.tex'
-file = 'figure8.txt'
+set output 'figure5.8.tex'
+file = 'figure5.8.txt'
 plot file using 1:2 w lp ls 1 title "\\footnotesize \\hspace{-0.15cm} BDF1",\
      file using 1:3 w lp ls 2 title "\\footnotesize \\hspace{-0.15cm} BDF2",\
      file using 1:4 w lp ls 3 title "\\footnotesize \\hspace{-0.15cm} BDF3",\

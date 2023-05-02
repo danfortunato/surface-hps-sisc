@@ -36,9 +36,9 @@ set grid back lt 1 lc rgb "#C8C8C8" lw 1.5
 set samples 2
 set style line 6 lc rgb '#000000' lw 4 dashtype (4,4)
 
-set output 'figure4.tex'
+set output 'figure5.4.tex'
 set multiplot layout 1,2
-file = 'figure4.txt'
+file = 'figure5.4.txt'
 
 set xrange [3:1e4]
 set yrange [1e-3:1e2]

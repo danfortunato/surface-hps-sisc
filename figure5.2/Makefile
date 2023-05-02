@@ -1,11 +1,11 @@
-figure2.pdf: figure2.gnuplot figure2.txt
-    gnuplot figure2.gnuplot
-    epstopdf figure2.eps
-    rm figure2.eps
-    mv figure2.tex figure2.pdf_tex
+figure5.2.pdf: figure5.2.gnuplot figure5.2.txt
+	gnuplot figure5.2.gnuplot
+	epstopdf figure5.2.eps
+	rm figure5.2.eps
+	mv figure5.2.tex figure5.2.pdf_tex
 
 clean:
-    rm -f figure2.pdf
-    rm -f figure2.pdf_tex
-    rm -f figure2.eps
-    rm -f figure2.tex
+	rm -f figure5.2.pdf
+	rm -f figure5.2.pdf_tex
+	rm -f figure5.2.eps
+	rm -f figure5.2.tex

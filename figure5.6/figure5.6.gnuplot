@@ -32,10 +32,10 @@ set grid xtics
 set grid ytics
 set grid back lt 1 lc rgb "#C8C8C8" lw 1.5
 
-set output 'figure6.tex'
+set output 'figure5.6.tex'
 set multiplot layout 1,2
 
-file = 'figure6.txt'
+file = 'figure5.6.txt'
 ext  = 'external.txt'
 set xrange [32:2048]
 set xlabel '$\nelem$' offset 0,0.3

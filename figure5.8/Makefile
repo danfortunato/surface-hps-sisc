@@ -1,11 +1,11 @@
-figure8.pdf: figure8.gnuplot figure8.txt
-    gnuplot figure8.gnuplot
-    epstopdf figure8.eps
-    rm figure8.eps
-    mv figure8.tex figure8.pdf_tex
+figure5.8.pdf: figure5.8.gnuplot figure5.8.txt
+	gnuplot figure5.8.gnuplot
+	epstopdf figure5.8.eps
+	rm figure5.8.eps
+	mv figure5.8.tex figure5.8.pdf_tex
 
 clean:
-    rm -f figure8.pdf
-    rm -f figure8.pdf_tex
-    rm -f figure8.eps
-    rm -f figure8.tex
+	rm -f figure5.8.pdf
+	rm -f figure5.8.pdf_tex
+	rm -f figure5.8.eps
+	rm -f figure5.8.tex

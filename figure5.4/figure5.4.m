@@ -49,7 +49,7 @@ end
 fprintf('\n');
 
 % Write results
-fid = fopen('figure4.txt', 'w');
+fid = fopen('figure5.4.txt', 'w');
 for k = 1:size(nelem, 1)
     fprintf(fid, '%4d %e %e %e %e %e\n', nelem(k), t_local(k), ...
         t_build(k), t_solve(k), t_rhs(k), mem_total(k));

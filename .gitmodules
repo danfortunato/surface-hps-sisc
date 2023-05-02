@@ -1,3 +1,6 @@
 [submodule "chebfun"]
 	path = chebfun
 	url = https://github.com/chebfun/chebfun
+[submodule "surface-hps"]
+	path = surface-hps
+	url = https://github.com/danfortunato/surface-hps

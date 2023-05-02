@@ -7,7 +7,9 @@ nelem   = zeros(length(grids), 1);
 fprintf('# p = %g\n', n-1);
 for k = 1:length(grids)
     fprintf('  grid = %g x %g\n', grids(k,1), grids(k,2));
-    [dom, f] = surfacemesh.stellarator(n, grids(k,1), grids(k,2));
+
+    % Manufactured solution
+    [dom, sol, f] = manufactured_solution(n, grids(k,1), grids(k,2));
     nelem(k) = length(dom);
     pdo = []; pdo.lap = 1;
 
@@ -34,7 +36,9 @@ t_pconv = zeros(length(ns), 1);
 fprintf('# grid = %g x %g, p =', grid(1), grid(2));
 for j = 1:length(ns)
     fprintf(' %g', ns(j)-1);
-    [dom, f] = surfacemesh.stellarator(ns(j), grid(1), grid(2));
+
+     % Manufactured solution
+    [dom, sol, f] = manufactured_solution(ns(j), grid(1), grid(2));
     pdo = []; pdo.lap = 1;
 
     % Warm up

@@ -128,7 +128,7 @@ Nu = @(u,v) alpha*u.*(1-tau1*v.^2) + v.*(1-tau2*u);
 Nv = @(u,v) beta*v.*(1+alpha/beta*tau1*u.*v) + u.*(gamma+tau2*v);
 
 rng(1)
-dom = surfacemesh.fromRhino('../../models/cow.csv', 8);
+dom = surfacemesh.fromRhino('../surface-hps/models/cow.csv', 8);
 dom = resample(dom, n);
 pdo = struct('lap', -dt*delta_u, 'b', 1);
 Lu = surfaceop(dom, pdo);

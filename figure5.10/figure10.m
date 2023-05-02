@@ -99,7 +99,7 @@ n = 16;
 N = @(u) u - (1+c*1i)*u.*(abs(u).^2);
 
 rng(1)
-dom = surfacemesh.fromRhino('models/cow.csv', 8);
+dom = surfacemesh.fromRhino('../surface-hps/models/cow.csv', 8);
 dom = resample(dom, n);
 pdo = struct('lap', -dt*delta, 'b', 1);
 L = surfaceop(dom, pdo);

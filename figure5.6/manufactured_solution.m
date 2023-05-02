@@ -23,8 +23,10 @@ for ku = 1:nu
 end
 
 % Make sure to match the ordering in surfacemesh.stellarator
-ordering = morton(nv, nu);
-vals(ordering(:)) = vals;
+if ( bitand(nv, nv-1) == 0 && bitand(nu, nu-1) == 0 )
+    ordering = morton(nv, nu);
+    vals(ordering(:)) = vals;
+end
 f = surfacefun(vals, dom);
 
 end

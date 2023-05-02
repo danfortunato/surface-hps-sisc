@@ -14,4 +14,4 @@ Figures 5.1&ndash;5.10 in the paper contain numerical results and each figure ha
 
 ## Instructions
 
-To generate figure `X`, change to the `figureX` directory and run the MATLAB script `figureX.m`. The script may plot a figure in MATLAB and/or write data to a file `figureX.txt`. In the latter case, the data may be plotted by running `make` from the `figureX` directory in a terminal.
+First, run the MATLAB script `setup.m` to add the required directories to your MATLAB path. To generate figure `X`, change to the `figureX` directory and run the MATLAB script `figureX.m`. The script may plot a figure in MATLAB and/or write data to a file `figureX.txt`. In the latter case, the data may be plotted by running `make` from the `figureX` directory in a terminal.

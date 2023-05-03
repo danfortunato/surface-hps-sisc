@@ -16,4 +16,4 @@ This repository uses git submodules. To initialize the submodules, either clone 
 
 ## Instructions
 
-First, run the MATLAB script `setup.m` to add the required directories to your MATLAB path. To generate figure `X`, change to the `figureX` directory and run the MATLAB script `figureX.m`. The script may plot a figure in MATLAB and/or write data to a file `figureX.txt`. In the latter case, the data may be plotted by running `make` from the `figureX` directory in a terminal.
+First, run the MATLAB script `setup.m` to add the required directories to your MATLAB path. To generate figure `5.X`, change to the `figure5_X` directory and run the MATLAB script `figure5_X.m`. The script may plot a figure in MATLAB and/or write data to a file `figure5_X.txt`. In the latter case, the data may be plotted by running `make` from the `figure5_X` directory in a terminal.

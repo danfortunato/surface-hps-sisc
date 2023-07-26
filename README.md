@@ -12,7 +12,7 @@ Figures 5.1&ndash;5.10 in the paper contain numerical results and each figure ha
 - Gnuplot
 - `epstopdf`
 
-This repository uses git submodules. To initialize the submodules, either clone this repository with the `--recursive` flag or run `git submodule update --init --recursive` after cloning.
+This repository uses git submodules. To initialize the submodules, either clone this repository with the `--recurse-submodules` flag or run `git submodule update --init --recursive` after cloning.
 
 ## Instructions
 

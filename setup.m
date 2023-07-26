@@ -1,7 +1,7 @@
 function setup
 
-addpath('chebfun');
-addpath('surface-hps');
-addpath('surface-hps/tools');
+addpath('surfacefun');
+addpath('surfacefun/tools');
+addpath('surfacefun/external/chebfun');
 
 end

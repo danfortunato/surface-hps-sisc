@@ -3,7 +3,7 @@ c = -1.5;
 N = @(u) u - (1+c*1i)*u.*(abs(u).^2);
 
 n = 8;
-dom = surfacemesh.fromRhino('../surface-hps/models/cow.csv', 8);
+dom = surfacemesh.fromRhino('../surfacefun/models/cow.csv', 8);
 dom = resample(dom, n);
 bb = boundingbox(dom);
 rng(1)
